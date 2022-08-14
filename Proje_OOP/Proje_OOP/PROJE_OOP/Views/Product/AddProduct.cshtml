@@ -1,0 +1,20 @@
+﻿@model PROJE_OOP.Entity.Product//ekleme işleminde model bu şekilde yazılır.
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/Shared/_CoreLayout.cshtml";
+}
+<h1>Ürün Ekleme Sayfası</h1>
+<form method="post">
+    
+    @Html.Label("Ürün Adı")
+    @Html.TextBoxFor(x => x.name,new { @class = "form-control" })
+  
+    @Html.Label("Birim Fiyatı")
+    @Html.TextBoxFor(x => x.UnityPrice,new { @class = "form-control" })
+    <br />
+    @Html.Label("Stok")
+    @Html.TextBoxFor(x => x.StockAmount,new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-info">Ürünü Ekle</button>
+</form>
+
